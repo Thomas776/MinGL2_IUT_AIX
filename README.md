@@ -1,32 +1,34 @@
+# Modified
+Ceci est une version modifiée de MinGL sans SFML/système audio, afin de pouvoir la compiler sur les ordinateurs de l'IUT Aix/Marseille, ne disposant pas de cette librairie
+
 # minGL 2
 MinGL 2 est un bibliothèque écrite en C++, évolution de MinGL par Alain Casali, enseignant chercheur au département informatique de l'IUT d'Aix-en-Provence.  
-Elle facilite l'affichage de forme primitives et composées, de texte et la réalisation d'animations. Elle permet également de jouer des fichiers audios et de gérer les saisies clavier et souris.
+Elle facilite l'affichage de forme primitives et composées, de texte et la réalisation d'animations. Elle permet également de gérer les saisies clavier et souris.
 
 Développé dans un but pédagogique.
 
 ## Installation
 Les dépendances suivantes sont requises pour utiliser minGL 2: 
 * freeglut
-* sfml (audio)
 
 Installation sous **Debian et dérivés**:
 ```
-sudo apt-get install freeglut3-dev libsfml-dev
+sudo apt-get install freeglut3-dev
 ```
 
 Installation sous **Arch Linux et Manjaro**: 
 ```
-sudo pacman -S freeglut sfml
+sudo pacman -S freeglut
 ```
 
 Installation sous **macOS** (avec [Homebrew](https://brew.sh) préalablement installé):
 ```
 brew cask install xquartz
-brew install freeglut sfml
+brew install freeglut
 ```
 **Important**: Afin de terminer l'installation de XQuartz, macOS doit être redémarré.
 
-Testé sous Debian 10, Ubuntu 20.04, macOS 10.15, Manjaro GNU/Linux (audio non testé)
+Testé sous Debian 10, Ubuntu 20.04, macOS 10.15, Manjaro GNU/Linux
 
 ## Utilisation
 
