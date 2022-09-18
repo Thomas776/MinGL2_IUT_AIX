@@ -42,3 +42,16 @@ jobs:
           build-static/libmingl.a
           build-shared/libmingl.so
 
+    - name: Update continuous release
+      uses: marvinpinto/action-automatic-releases@v1.2.1
+      env:
+          DISABLE_RELEASE: ${{ secrets.DISABLE_RELEASE }}
+      if: "${{ env.DISABLE_RELEASE == '' }}"
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        automatic_release_tag: "continuous"
+        prerelease: true
+        title: "Version continue"
+        files: |
+          build-static/libmingl.a
+          build-shared/libmingl.so
