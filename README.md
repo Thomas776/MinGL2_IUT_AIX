@@ -42,6 +42,8 @@ Il vous suffit ensuite de rajouter dans votre ``.pro`` la directive ``include(..
 
 Par exemple, si vous avez décompressé minGL 2 dans le sous-répertoire ``minGL2/`` présent dans le même répertoire que votre ``.pro``, alors vous devez écrire dans ce dernier: ``include(minGL2/mingl.pri)``.
 
+### Avec un autre projet qmake
+
 ### En tant que bibliothèque
 
 Vous pouvez trouver une bibliothèque statique (.a) et une bibliothèque partagée (.so) dans les [releases](/releases) de ce dépôt
@@ -62,4 +64,4 @@ Dans le répertoire ``tools/``, vous trouverez des outils relatif a l'utilisatio
 * **Alexandre Sollier et Clément Mathieu--Drif**: Développeurs principaux de minGL 2
 * **Alain Casali**: Auteur de la version originale de MinGL
 * La promo 2020-2021 de la 2ème année du Département Informatique de l'IUT d'Aix-en-Provence
-
+* Thomas Rubini
