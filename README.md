@@ -43,7 +43,10 @@ Il vous suffit ensuite de rajouter dans votre ``.pro`` la directive ``include(..
 Par exemple, si vous avez décompressé minGL 2 dans le sous-répertoire ``minGL2/`` présent dans le même répertoire que votre ``.pro``, alors vous devez écrire dans ce dernier: ``include(minGL2/mingl.pri)``.
 
 ### En tant que bibliothèque
-Vous pouvez facilement compiler minGL 2 en tant que bibliothèque afin de générer le fichier ``libmingl.a``.  
+
+Vous pouvez trouver une bibliothèque statique (.a) et une bibliothèque partagée (.so) dans les [releases](/releases) de ce dépôt
+
+Vous pouvez également facilement compiler minGL 2 en tant que bibliothèque afin de générer le fichier ``libmingl.a``.  
 Il vous suffit simplement d'ouvrir le fichier de projet ``mingl.pro`` et de lancer la compilation, vous trouverez le fichier ``.a`` dans le répertoire de compilation.  
 Le répertoire ``include/`` contient tout les fichiers d'en-tête de minGL 2.
 
