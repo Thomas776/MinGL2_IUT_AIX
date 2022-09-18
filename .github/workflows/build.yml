@@ -46,3 +46,17 @@ jobs:
           build-static/libmingl.a
           build-shared/libmingl.so
 
+    - name: Update continuous release
+      uses: softprops/action-gh-release@v1
+      env:
+          DISABLE_RELEASE: ${{ secrets.DISABLE_RELEASE }}
+      if: "${{ env.DISABLE_RELEASE == '' }}"
+      with:
+        name: "Version continue"
+        tag_name: "continuous"
+        body: "Bibliothèque statique et partagée construites avec le dernier commit (ne pas regarder la date de création de la release, elle ne représente pas la date du dernier commit traité"
+        token: "${{ secrets.GITHUB_TOKEN }}"
+        prerelease: true
+        files: |
+          build-static/libmingl.a
+          build-shared/libmingl.so
