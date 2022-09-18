@@ -1,0 +1,48 @@
+name: C/C++ CI
+
+on:
+  push:
+    paths-ignore:
+      - '*.md'
+  pull_request:
+    paths-ignore:
+      - '*.md'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    container:
+      image: ubuntu:18.04
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Install dependencies
+      run: |
+        apt update
+        apt install -y gcc g++ make cmake freeglut3-dev libsfml-dev
+    
+    - name: CMake build (static library)
+      run: |
+        mkdir build-static
+        cd build-static
+        cmake ..
+        make -j 4
+        
+    - name: CMake build (shared library)
+      run: |
+        mkdir build-shared
+        cd build-shared
+        cmake .. -DBUILD_SHARED_LIBS=ON
+        make -j 4
+        
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: MinGL Libraries
+        path: |
+          build-static/libmingl.a
+          build-shared/libmingl.so
+
