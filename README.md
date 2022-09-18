@@ -14,6 +14,11 @@ Installation sous **Debian et dérivés**:
 sudo apt-get install freeglut3-dev libsfml-dev
 ```
 
+Installation sous **Fedora**:
+```
+sudo dnf install freeglut-devel SFML-devel
+```
+
 Installation sous **Arch Linux et Manjaro**: 
 ```
 sudo pacman -S freeglut sfml
